@@ -1,6 +1,8 @@
 import 'package:bloc_examples/bloc/Switch/switch_bloc.dart';
 import 'package:bloc_examples/bloc/counter/counter_bloc.dart';
+import 'package:bloc_examples/bloc/favourite/bloc/favourite_bloc.dart';
 import 'package:bloc_examples/bloc/todo/bloc/todo_bloc.dart';
+import 'package:bloc_examples/repository/favourite_repository.dart';
 import 'package:bloc_examples/ui/counter_screen.dart';
 import 'package:bloc_examples/ui/favourite_screen.dart';
 import 'package:bloc_examples/ui/switch_screen.dart';
@@ -23,6 +25,7 @@ class MyApp extends StatelessWidget {
           BlocProvider(create: (_) => CounterBloc()),
           BlocProvider(create: (_) => SwitchBloc()),
           BlocProvider(create: (_) => TodoBloc()),
+          BlocProvider(create: (_) => FavouriteBloc(FavouriteRepository())),
         ],
         child: MaterialApp(
           themeMode: ThemeMode.dark,
