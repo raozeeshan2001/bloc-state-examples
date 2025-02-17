@@ -7,6 +7,7 @@ import 'package:bloc_examples/repository/favourite_repository.dart';
 import 'package:bloc_examples/repository/post_repo.dart';
 import 'package:bloc_examples/ui/counter_screen.dart';
 import 'package:bloc_examples/ui/favourite_screen.dart';
+import 'package:bloc_examples/ui/formscreen.dart';
 import 'package:bloc_examples/ui/postscreen.dart';
 import 'package:bloc_examples/ui/switch_screen.dart';
 import 'package:bloc_examples/ui/todo_screen.dart';
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
             ),
             useMaterial3: true,
           ),
-          home: Postscreen(),
+          home: Formscreen(),
         ));
   }
 }
