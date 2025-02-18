@@ -4,6 +4,7 @@ import 'package:bloc_examples/bloc/counter/counter_bloc.dart';
 import 'package:bloc_examples/bloc/favourite/bloc/favourite_bloc.dart';
 import 'package:bloc_examples/bloc/todo/bloc/todo_bloc.dart';
 import 'package:bloc_examples/repository/favourite_repository.dart';
+import 'package:bloc_examples/repository/formrepo.dart';
 import 'package:bloc_examples/repository/post_repo.dart';
 import 'package:bloc_examples/ui/counter_screen.dart';
 import 'package:bloc_examples/ui/favourite_screen.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
           BlocProvider(create: (_) => SwitchBloc()),
           BlocProvider(create: (_) => TodoBloc()),
           BlocProvider(create: (_) => FavouriteBloc(FavouriteRepository())),
-          BlocProvider(create: (_) => PostsBloc(PostRepo())),
+          BlocProvider(create: (_) => PostsBloc(PostRepo(), Formrepo())),
         ],
         child: MaterialApp(
           themeMode: ThemeMode.dark,

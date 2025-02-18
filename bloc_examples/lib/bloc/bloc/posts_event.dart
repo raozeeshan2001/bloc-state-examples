@@ -8,3 +8,12 @@ sealed class PostsEvent extends Equatable {
 }
 
 class postfetched extends PostsEvent {}
+
+class postform extends PostsEvent {
+  final Formmodel post;
+
+  postform(this.post);
+
+  @override
+  List<Object> get props => [post];
+}
